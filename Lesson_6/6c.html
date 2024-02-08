@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6c</title>
+  </head>
+  <body>
+    <script>
+      // Create new Date object
+      let currentTime = new Date();
+      // Get the hour from the object
+      let hour = currentTime.getHours();
+      // Declare name variable
+      let name = 'Lee Cheng Zhen';
+      
+      // Carry out the if statements
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning ${name}!`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon ${name}!`);
+      } else {
+        console.log(`Good night ${name}!`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6j</title>
+  </head>
+  <body>
+    <script>
+      // Generate a random number variable
+      const randomNumber = Math.random();
+      // Declare result variable and check for heads or tails using ternary operators
+      let result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      // Declare guess variable
+      let guess = 'heads';
+
+      // Check for win or lose using ternary operators
+      guess === result ? console.log('You win!') : console.log('You lose!');
+    </script>
+  </body>
+</html>

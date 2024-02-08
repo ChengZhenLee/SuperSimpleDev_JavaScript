@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6i</title>
+  </head>
+  <body>
+    <script>
+      // Generate a random number variable
+      const randomNumber = Math.random();
+      // Declare result variable
+      let result = '';
+
+      // Check for heads or tails
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
+      }
+
+      // Declare guess variable
+      let guess = 'heads';
+
+      if (guess === result) {
+        console.log('You win!');
+      } else {
+        console.log('You lose!');
+      }
+    </script>
+  </body>
+</html>
