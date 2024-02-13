@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7f</title>
+  </head>
+  <body>
+    <script>
+      function convertToFahrenheit(celsius) {
+        let fahrenheit = (celsius * 9 / 5) + 32;
+
+        return (fahrenheit);
+      }
+
+      function convertToCelsius(fahrenheit) {
+        let celsius = (fahrenheit - 32) * 5 / 9;
+
+        return (celsius);
+      }
+
+      function convertTemperature(degrees, unit) {
+        // Check the unit and convert
+        if (unit === 'C') {
+          degrees = convertToFahrenheit(degrees);
+        } else if (unit === 'F') {
+          degrees = convertToCelsius(degrees);
+        } else {
+          return 'Incorrect parameters';
+        }
+
+        return (degrees + unit);
+      }
+
+      // Test the output of the function
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+
+      // These cases return undefined
+      console.log(convertTemperature(25, 'f'));
+      console.log(convertTemperature(25));
+      console.log(convertTemperature('F'));
+      console.log(convertTemperature('F', 25));
+    </script>
+  </body>
+</html>
