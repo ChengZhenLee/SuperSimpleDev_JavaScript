@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8d</title>
+  </head>
+  <body>
+    <script>
+      function comparePrice(product1, product2) {
+        if (product1.price > product2.price) {
+          return product1;
+        } else if (product1.price < product2.price) {
+          return product2;
+        } else {
+          return undefined;
+        }
+      }
+
+      const product2 = {
+        name: 'football',
+        price: 2000
+      };
+      
+      const product3 = {
+        name: 'baseball',
+        price: 1000
+      };
+
+      console.log(comparePrice(product2, product3));
+    </script>
+  </body>
+</html>

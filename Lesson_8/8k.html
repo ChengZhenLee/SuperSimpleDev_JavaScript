@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8k</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      let score = JSON.parse(localStorage.getItem('score')) || {wins: 0, losses: 0};
+
+      function playGame(guess) {
+        // Generate a random number variable
+        const randomNumber = Math.random();
+        // Declare result variable and check for heads or tails using ternary operators
+        let result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        // Check for win or lose using ternary operators
+        guess === result ? (score.wins++, console.log('You win!')) : (score.losses++, console.log('You lose!'));
+
+        // Display the score
+        console.log(`Wins: ${score.wins}, Losses: ${score.losses}`);
+
+        // Save the score
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>
