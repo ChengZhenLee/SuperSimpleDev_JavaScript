@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input class="text-input" onkeyup="
+      detectInput(event.key);
+    " placeholder="Type something">
+    <p class="output"></p>
+
+    <script>
+      function detectInput(key) {
+        document.querySelector('.output')
+          .innerHTML += key;
+      }
+    </script>
+  </body>
+</html>

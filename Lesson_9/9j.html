@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>Calculator</p>
+
+    <p class="display"></p>
+
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
+      
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">0</button>
+      
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+        updateCalculation('=');
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('');
+      ">Clear</button>
+    </p>
+
+    <script>
+      /*
+        If calculation is not stored in localStorage,
+        create a default '' value
+      */
+      let calculation = localStorage.getItem('calculation') || '';
+      let display = document.querySelector('.display');
+
+      // Display calculation when the page loads
+      displayCalculation();
+
+      function displayCalculation() {
+        display.innerHTML = calculation;
+      }
+
+      function updateCalculation(value) {
+        if (value === '=') {
+          calculation = eval(calculation);
+          displayCalculation();
+        } else if (value === '') {
+          calculation = '';
+          console.log('Cleared');
+          displayCalculation();
+        } else {
+          calculation += value;
+          displayCalculation();
+        }
+
+        localStorage.setItem('calculation', calculation);
+      }
+    </script>
+  </body>
+</html>

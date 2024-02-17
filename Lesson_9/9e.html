@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9e</title>
+  </head>
+  <body>
+    <input class="text-input" onkeydown="
+      detectEnterKey(event);
+    " placeholder="Name">
+    <button onclick="
+      displayName();
+    ">Submit</button>
+    <p class="output"></p>
+
+    <script>
+      function detectEnterKey(event) {
+        if (event.key === 'Enter') {
+          displayName();
+        }
+      }
+
+      function displayName() {
+        name = document.querySelector('.text-input').value;
+        document.querySelector('.output')
+          .innerHTML = `Your name is: ${name}`;
+      }
+    </script>
+  </body>
+</html>
