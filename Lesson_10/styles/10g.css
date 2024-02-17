@@ -1,0 +1,11 @@
+.interactive-button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
