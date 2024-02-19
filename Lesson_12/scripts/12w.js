@@ -16,7 +16,7 @@ score = {
 
 updateScoreElement();
 
-  function playGame(playerMove) {
+function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
   let result = '';
@@ -104,14 +104,18 @@ let intervalId;
 //};
 
 function autoPlay() {
+  const button = document.querySelector('.js-auto-play-button');
+
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
+    button.innerHTML = 'Stop Playing';
     isAutoPlaying = true;
   } else {
     clearInterval(intervalId);
+    button.innerHTML = 'Auto Play';
     isAutoPlaying = false;
   }
 }
@@ -139,5 +143,23 @@ document.body.addEventListener('keydown', (event) => {
     playGame('paper');
   } else if (event.key === 's') {
     playGame('scissors');
+  } else if (event.key === 'Backspace') {
+    resetScore();
+  } else if (event.key === 'a') {
+    autoPlay();
   }
 });
+
+document.querySelector('.js-auto-play-button')
+  .addEventListener('click', autoPlay);
+
+function resetScore() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+}
+
+document.querySelector('.js-reset-score-button')
+  .addEventListener('click', resetScore);

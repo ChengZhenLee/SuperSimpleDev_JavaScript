@@ -16,7 +16,7 @@ score = {
 
 updateScoreElement();
 
-  function playGame(playerMove) {
+function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
   let result = '';
@@ -104,14 +104,18 @@ let intervalId;
 //};
 
 function autoPlay() {
+  const button = document.querySelector('.js-auto-play-button');
+
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
+    button.innerHTML = 'Stop Playing';
     isAutoPlaying = true;
   } else {
     clearInterval(intervalId);
+    button.innerHTML = 'Auto Play';
     isAutoPlaying = false;
   }
 }
@@ -141,3 +145,6 @@ document.body.addEventListener('keydown', (event) => {
     playGame('scissors');
   }
 });
+
+document.querySelector('.js-auto-play-button')
+  .addEventListener('click', autoPlay);

@@ -4,18 +4,17 @@
     <title>12e</title>
   </head>
   <body>
-    <button onclick="
-      addToCart();
-    ">Add to cart</button>
+    <button class="js-add-button">Add to cart</button>
     <p class="js-display"></p>
     <script>
+      document.querySelector('.js-add-button')
+        .addEventListener('click', addToCart);
+
       function addToCart() {
         let display = document.querySelector('.js-display');
 
         display.innerHTML = 'Added';
-        setTimeout(function() {
-          display.innerHTML = '';
-        }, 2000);
+        setTimeout(() => display.innerHTML = '', 2000);
       }
     </script>
   </body>

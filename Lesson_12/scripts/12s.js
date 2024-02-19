@@ -141,3 +141,6 @@ document.body.addEventListener('keydown', (event) => {
     playGame('scissors');
   }
 });
+
+document.querySelector('.js-auto-play-button')
+  .addEventListener('click', autoPlay);

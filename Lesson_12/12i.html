@@ -4,19 +4,25 @@
     <title>App</title>
   </head>
   <body>
-    <button onclick="
-      messages++;
-      setNotification();
-    ">Add</button>
-    <button onclick="
-      if (messages > 0) {
-        messages--;
-      }
-      setNotification();
-    ">Remove</button>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
     <script>
       let messages = 2;
       let intervalId;
+
+      document.querySelector('.js-add-button')
+        .addEventListener('click', () => {
+          messages++;
+          setNotification();
+        });
+
+      document.querySelector('.js-remove-button')
+        .addEventListener('click', () => {
+          if (messages > 0) {
+            messages--;
+          }
+          setNotification();
+        });
 
       setNotification();
 
@@ -25,19 +31,14 @@
           clearInterval(intervalId);
         }
         if (messages === 0) {
-          stopNotification();
+          document.title = 'App';
         } else {
           startNotification();
         }
       }
 
-      function stopNotification() {
-        clearInterval(intervalId);
-        document.title = 'App';
-      }
-
       function startNotification() {
-        intervalId = setInterval(function() {
+        intervalId = setInterval(() => {
           if (document.title === 'App') {
             document.title = `(${messages}) New messages`;
           } else {
