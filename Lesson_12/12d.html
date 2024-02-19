@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12d</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="
+      changeButton();
+    ">Start</button>
+    <script>
+      function changeButton() {
+        const button = document.querySelector('.js-button');
+        button.innerHTML = 'Loading...';
+        setTimeout(function() {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

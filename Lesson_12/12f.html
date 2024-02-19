@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12f</title>
+  </head>
+  <body>
+    <button onclick="
+      addToCart();
+    ">Add to cart</button>
+    <p class="js-display"></p>
+    <script>
+      let timeoutId;
+
+      function addToCart() {
+        let display = document.querySelector('.js-display');
+
+        // Clear the previous timeout and set a new timeout
+        clearTimeout(timeoutId);
+        display.innerHTML = 'Added';
+        timeoutId = setTimeout(function() {
+          display.innerHTML = '';
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

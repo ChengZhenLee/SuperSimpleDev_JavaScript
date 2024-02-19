@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <script>
+      /*
+      function greeting() {
+        console.log('hello');
+      }
+      greeting();
+
+      const num = 2;
+      // This is an anonymous function
+      const function1 = function() {
+        console.log('hello2');
+      };
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      const object1 = {
+        num: 2,
+        // This is a method: a function in an object
+        fun: function() {
+          console.log('hello3');
+        }
+      };
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      // Passing a function into another function
+      function run(param) {
+        param();
+      }
+      run(function() {
+        console.log('hello4')
+      });
+      */
+
+      /*
+      // setTimeout runs a function after a certain amount of milliseconds
+      // Ansynchronous code: Computer won't wait for setTimeout to finish before moving to the next line, so it doesn't appear to run line-by-line
+      setTimeout(function() {
+        console.log('timeout');
+        console.log('timeout2');
+      }, 3000);
+
+      console.log('next line');
+
+      // setInterval runs a function after every amount of milliseconds
+      // It is also asynchronous
+      setInterval(function() {
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2');
+      */
+
+      // Similar to a for loop
+      // Better to use a regular for loop if break is needed
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        // Does the same as continue
+        if (value === 'wash dishes') {
+          return;
+        }
+
+        console.log(index);
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
