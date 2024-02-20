@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-row {
+  border: none;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  text-align: center;
+}
+
+.game-row > * {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.tile {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+}
+
+.middle-row {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.middle-column {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  margin: 10px;
+}
+
+.player-button,
+.computer-button {
+  margin: 5px;
+}
+
+.message {
+  font-size: 30px;
+  text-align: center;
+}
+
+.select-button {
+  height: 20px;
+  width: 20px;
+}

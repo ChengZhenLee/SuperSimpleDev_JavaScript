@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.counter {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 225px 225px;
+}
+
+.start-button,
+.reset-button {
+  background-color: green;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.reset-button,
+.stop-button {
+  background-color: red;
+}
+
+.minutes-header,
+.seconds-header,
+.milliseconds-header {
+  border: 2px solid black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.minutes,
+.seconds,
+.milliseconds {
+  font-size: 20px;
+}
