@@ -6,6 +6,13 @@
   </head>
   <body>
     <div class="game-container">
+      <div class="button-container">
+        <button class="js-computer-button computer-button">Play Against Computer (press C)</button>
+        <button class="js-player-button player-button">Play Against Player (press P)</button>
+      </div>
+  
+      <p class="js-message message"></p>
+
       <div class="game-row">
         <div class="js-0 tile"></div>
         <div class="js-1 middle-column tile"></div>
@@ -22,18 +29,17 @@
         <div class="js-8 tile"></div>
       </div>
       
-      <div class="button-container">
-        <button class="js-computer-button computer-button">Play Against Computer</button>
-        <button class="js-player-button player-button">Play Against Player</button>
-      </div>
-
-      <p class="js-message message"></p>
-      
-      <button class="js-reset-button reset-button">Reset</button>
+      <button class="js-reset-button reset-button">Reset (press R)</button>
 
       <div class="js-score scoreboard"></div>
-      <button class="js-reset-score reset-score-button">Reset Score</button>
-      <button class="js-reset-computer">Reset Computer</button>
+      <div class="reset-buttons">
+        <button class="js-reset-score reset-score-button">
+          Reset Score
+        </button>
+        <button class="js-reset-computer reset-computer-button">
+          Reset Computer
+        </button>
+      </div>
     </div>
     <script src="scripts/tic-tac-toe.js"></script>
   </body>

@@ -1,4 +1,6 @@
 body {
+  align-items: center;
+  background-color: rgb(225, 225, 153);
   display: flex;
   justify-content: center;
 }
@@ -49,22 +51,28 @@ body {
 
 .player-button,
 .computer-button {
+  background-color: rgb(173, 216, 230);
   margin: 5px;
 }
 
 .message {
-  font-size: 30px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
   text-align: center;
 }
 
 .select-button {
-  height: 20px;
-  width: 20px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
 }
 
 .reset-button {
+  background-color: rgb(255, 204, 204);
   font-size: 15px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
 }
 
@@ -73,8 +81,18 @@ body {
   margin: 10px;
 }
 
-.reset-score-button {
-  font-size: 15px;
+.reset-buttons {
+  display: grid;
+  grid-template-columns: 150px 150px;
+}
+
+.reset-score-button,
+.reset-computer-button {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
   margin: 10px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

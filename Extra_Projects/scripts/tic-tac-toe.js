@@ -33,6 +33,17 @@ computerButton.addEventListener('click', () => {
 // Resets the game
 resetButton.addEventListener('click', resetGame);
 
+// Add event listener to keyboard presses
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'c') {
+    computerButton.click();
+  } else if (event.key === 'p') {
+    playerButton.click();
+  } else if (event.key === 'r') {
+    resetButton.click();
+  }
+});
+
 // Resets the score board
 resetScoreButton.addEventListener('click', () => {
   score.ties = 0;
