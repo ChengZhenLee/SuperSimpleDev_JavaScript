@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>15e</title>
+  </head>
+  <body>
+    <script type="module">
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      let today = dayjs();
+
+      function isWeekend(date) {
+        date = date.format('dddd');
+        if (date === 'Saturday' || date === 'Sunday') {
+          return true;
+        }
+        return false;
+      }
+
+      console.log(isWeekend(today));
+      console.log(isWeekend(today.add(1, 'days')));
+      console.log(isWeekend(today.add(4, 'days')));
+    </script>
+  </body>
+</html>

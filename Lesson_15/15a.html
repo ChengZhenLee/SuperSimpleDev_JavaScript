@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>15a</title>
+  </head>
+  <body>
+    <script type="module">
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      const today = dayjs();
+      let newDate= today.add(5, 'days');
+      newDate = newDate.format('MMMM D');
+      console.log(newDate);
+    </script>
+  </body>
+</html>
